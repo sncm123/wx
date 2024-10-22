@@ -1,0 +1,221 @@
+<view class="me-card">
+  <view class="mecar-title">
+    <view class="me-image">
+      <image src="/assets/vx头像.jpg" alt="头像" />
+    </view>
+      <text class="title">Elysia的个人简历</text>
+    <view class="me-hover">
+      <text class="dazi">{{displayText}}</text>
+    </view>
+  </view>
+
+  <view class="borderbotm"></view>
+
+  <!-- <view class="lianxi-list">
+    <navigator url="path/to/wechat">
+      <image src="/assets/飞鸟切换.png" class="icon" />
+    </navigator>
+
+    <navigator url="https://gitee.com/wttAndroid">
+      <image src="/assets/飞鸟切换.png" class="icon" />
+    </navigator>
+
+    <navigator url="mailto:1457321681@qq.com?Subject=邮箱标题&Body=邮箱内容！">
+      <image src="/assets/飞鸟切换.png" class="icon" />
+    </navigator>
+
+    <navigator url="path/to/qq">
+      <image src="/assets/飞鸟切换.png" class="icon" />
+    </navigator>
+  </view> -->
+  <view class="column da-geshi ai-center">
+    <text class="xiaozi xiao-geshi text-shadow">{{displayText1}}</text>
+      <text class="xiao-geshi text-shadow">Hello</text>
+      <text class="xiao-geshi text-shadow">I`m MengQing</text>
+    <button class="lj-button" plain="true" hover-class="" bindtap="tojianli">了解一下</button>
+  </view>
+  <view class="borderbotm"></view>
+    <view class="column da-geshi">
+      <view class="row jc-between xiao-geshi">
+      <text>毕业院校</text>
+      <text class="xiaozi">成都理工大学</text>
+      </view>
+      <view class="row jc-between xiao-geshi">
+      <text>所在城市</text>
+      <text class="xiaozi">四川成都</text>
+      </view>
+      <view class="row jc-between xiao-geshi">
+      <text>年级</text>
+      <text class="xiaozi">25届毕业生</text>
+      </view>
+    </view>
+  <view class="borderbotm"></view>
+  <view>
+    <button class="lianxi-button da-geshi" bindtap="dianhua">联系我</button>
+  </view>
+</view>
+<view class="part2 row wrap jc-between">
+  <view class="box column ai-center" bindtap="togrjl">
+    <text class="xiao-geshi">8+</text>
+    <view class="line"></view>
+    <text class="xiao-geshi">完成的项目</text>
+  </view>
+  <view class="box column ai-center" bindtap="togrjl">
+    <text class="xiao-geshi">4+</text>
+    <view class="line"></view>
+    <text class="xiao-geshi">获奖情况</text>
+  </view>
+</view>
+<view class="part3">
+  <view class="row jc-between ai-center">
+    <text>我的格言</text>
+    <view class="line"></view>
+    <text>01</text>
+  </view>
+  <view>
+    <text class="geyan">"I hope I could keep advancing and let my life shine as a precious stone.and let my life shine as a precious stone."</text>
+  </view>
+</view>
+<view class="part4">
+  <view class="row jc-between ai-center">
+    <text>我的能力</text>
+    <view class="line"></view>
+    <text>02</text>
+  </view>
+  <view class="row wrap jc-between">
+    <view class="nl-box column">
+      <image class="icon" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17264749436743336986.png" mode=""/>
+      <text class="bt-jiange">UI设计</text>
+      <text class="xiaozi">UI排版</text>
+      <text class="xiaozi">交互式页面</text>
+    </view>
+    <view class="nl-box column">
+      <image class="icon" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17264748872874178601.png" mode=""/>
+      <text class="bt-jiange">视频制作</text>
+      <text class="xiaozi">AfterEffects</text>
+      <text class="xiaozi">剪映</text>
+    </view>
+    <view class="nl-box column">
+      <image class="icon" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17264748818611879707.png" mode=""/>
+      <text class="bt-jiange">前端</text>
+      <text class="xiaozi">网页制作</text>
+      <text class="xiaozi">uniapp小程序</text>
+    </view>
+    <view class="nl-box column">
+      <image class="icon" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17264748453593049581.png" mode=""/>
+      <text class="bt-jiange">游戏</text>
+      <text class="xiaozi">Unity游戏</text>
+      <text class="xiaozi">UE5全流程游戏</text>
+    </view>
+  </view>
+</view>
+<view class="part5">
+  <view class="row jc-between ai-center">
+    <text>我的UI设计</text>
+    <view class="line"></view>
+    <text>03</text>
+  </view>
+  <swiper class="lunbo" indicator-dots indicator-color='ivory' autoplay interval="3000" indicator-active-color='#d43c33'>
+    <swiper-item>
+      <image src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17269907842506349250.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17269907963283165282.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17269909602332195398.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17269909646677557389.png"></image>
+    </swiper-item>
+    <!-- <swiper-item>
+      <image src="/assets/专业学习.png"></image>
+    </swiper-item> -->
+  </swiper>
+</view>
+<view class="part6">
+  <view class="row jc-between ai-center">
+    <text>个人作品</text>
+    <view class="line"></view>
+    <text>04</text>
+  </view>
+  <!-- <view class="row jc-center ai-center">
+    <image src="https://pic1.zhimg.com/80/v2-4a06bc2eb6d6772565b36506e9913bc3_1440w.jpg" class="zuoping-img"></image>
+    <view class="line-shu"></view>
+    <image src="https://pic1.zhimg.com/80/v2-4a06bc2eb6d6772565b36506e9913bc3_1440w.jpg" class="zuoping-img"></image>
+  </view> -->
+  <view>
+    <view class="row jc-between ai-center da-geshi">
+      <view class="line"></view>
+      <text class="biaoti">AE动漫混剪</text>
+      <view class="line"></view>
+    </view>
+    <view class="row jc-center">
+      <video 
+      class="myVideo"
+      id="myVideo" 
+      src="{{videoSrc}}" 
+      danmu-list="{{danmuList}}" 
+      enable-danmu 
+      danmu-btn 
+      show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      controls
+      picture-in-picture-mode="{{['push', 'pop']}}"
+      ></video></view>
+  </view>
+  <view>
+    <view class="row jc-between ai-center da-geshi">
+      <view class="line"></view>
+      <text class="biaoti">博物馆VR体验</text>
+      <view class="line"></view>
+    </view>
+    <view class="row jc-center">
+      <video 
+      class="myVideo"
+      id="myVideo" 
+      src="https://apd-vlive.apdcdn.tc.qq.com/vhot2.qqvideo.tc.qq.com/AeEiV3UiPROgCfsA2-aRBiP23Z5ViAP3F6Jfbu29ydzY/B_JxNyiJmktHRgresXhfyMei0ZV6ipu6zRm3-X6zr7N3atJie2RmaQ8BAh-pBFgMbb/svp_50069/gzc_1000035_0b53vebasaac24aouoxv2ftjpkodbguqecka.f206310.mp4?sdtfrom=v1104&guid=0df3f77a852fb8a88452b0b2b8feb507&vkey=A59F8321F57276FB9DE64EFDB3CABE36F8ED7E5B11D360040DD43A76F30DDB12391393C8FE84D73623CB3B690A5DA0C48FD7BC0F159BC3D4BEA42E2B0AF810B6BEAFDE4C713D23EAB7467A2114B5D1A9355AF4F30C61D38604004BB316D161BD657F87E3FA12EBD29E03AF1D2108C9F8D4C6A64964A656F5DE390455DE239FF06CFA687FD56A0A648962DA4EDEA9C24D2C990A7A618954C9CAA0644A5A5B0F394490C7A1F754426B20954FB7E97560D4" 
+      danmu-list="{{danmuList}}" 
+      enable-danmu 
+      danmu-btn 
+      show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      controls
+      picture-in-picture-mode="{{['push', 'pop']}}"
+      ></video></view>
+  </view>
+  <view>
+    <view class="row jc-between ai-center da-geshi">
+      <view class="line"></view>
+      <text class="biaoti">UE5跑酷小游戏</text>
+      <view class="line"></view>
+    </view>
+    <view class="row jc-center">
+      <video 
+      class="myVideo"
+      id="myVideo" 
+      src="https://apd-vlive.apdcdn.tc.qq.com/vhot2.qqvideo.tc.qq.com/A7qsdbBCo_JREp6R2sKgsgk8Kd6c23mE99BJ67MsNuB4/B_JxNyiJmktHRgresXhfyMepYPGKqB1W3kYt1jSrWu8M10FFBA-hMAbLTsLJJE_iK2/svp_50069/gzc_1000035_0b53pebwyaadyuaizzxucftjm6odnr4qg3ca.f206310.mp4?sdtfrom=v1104&guid=0df3f77a852fb8a88452b0b2b8feb507&vkey=0BEB9696C46E5F0FBB60350EB9A9B753F3789A5512B418C8E757EFA3064AD760F42C418E745EBCE0A456927F150E4554F27093B2151C96D248E40A1EF4C84BAA1B83DEFF4E0569F43A5566D2ECAA9EE01B84800F33748368F7799315C3753D9971163048B2CA604458469973D01CC4EBC91E45E26FD1300EFA2E3A9A07830E49996F9DBCA07D80192F53D4CE5656DD851DBE68081D1A0135176A3A8D821E8AF13A72DB902259D02725DC30A9C2F61564" 
+      danmu-list="{{danmuList}}" 
+      enable-danmu 
+      danmu-btn 
+      show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      controls
+      picture-in-picture-mode="{{['push', 'pop']}}"
+      ></video></view>
+  </view>
+</view>
+<view class="row jc-between ai-center da-geshi">
+  <view class="line-dibu"></view>
+  <text class="biaoti">已经到底咯</text>
+  <view class="line-dibu"></view>
+</view>
+<view>
+  <!-- 音频播放 -->
+  <audio src="http://music.163.com/song/media/outer/url?id=2626813483.mp3" id="myAudio" />
+  <!-- 固定在屏幕右下角的音乐播放图标 -->
+  <image class="music {{isPlaying ? 'rotate' : ''}}" 
+    src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17268211609406482116.png" 
+    bindtap="onMusicTap" 
+    mode="widthFix" />
+</view>

@@ -1,0 +1,341 @@
+.me-card {
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 20px;
+  background-color: #f5f5f5;
+}
+
+.mecar-title {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.me-image {
+  display: flex;
+  align-items: center;
+}
+
+.me-image image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.me-hover text {
+  font-size: 14px;
+  color: #666;
+}
+
+.dazi {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 2px solid black; /* 光标效果 */
+  animation: blink-caret 0.75s step-end infinite; /* 光标闪烁 */
+}
+
+@keyframes blink-caret {
+  0% { border-color: black; }
+  50% { border-color: transparent; }
+  100% { border-color: black; }
+}
+
+.lianxi-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.lianxi-list navigator {
+  display: flex;
+  text-align: center;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+}
+
+.borderbotm {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 10px 0;
+}
+
+.text-color{
+  color: rgb(255, 255, 255);
+}
+
+.column{
+  display: flex;
+  flex-direction:column;
+}
+
+.row{
+  display: flex;
+  flex-direction:row;
+}
+
+.jc-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+.xiao-geshi{
+  height: 25px;
+  line-height: 25px;
+}
+
+.da-geshi{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.xiaozi{
+  font-size: 14px;
+  color: #666;
+}
+
+.lianxi-button {
+  width: 200px;
+  color: rgb(255, 255, 255);
+  font-size: default;
+  background-color: #ff8181;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lianxi-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* 从左侧开始 */
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* 光幕的颜色和透明度 */
+  transform: skewX(-45deg); /* 使光幕倾斜 */
+  animation: light-swipe 2s infinite; /* 动画效果 */
+}
+
+@keyframes light-swipe {
+  0% {
+    left: -100%; /* 初始位置在按钮左边外部 */
+  }
+  50% {
+    left: 110%; /* 中途位置在按钮右边外部 */
+  }
+  100% {
+    left: 120%; /* 动画结束后重新开始 */
+  }
+}
+
+.part2{
+  width: 80%;
+  padding: 20px;
+  margin:20px;
+}
+
+.part3{
+  width: 80%;
+  padding: 20px;
+  margin:20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.box {
+  width: 140px;
+  height: 80px;
+  padding-top: 10px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px 10px #03bbf3;
+  animation: fire-flicker 2s infinite ease-in-out; /* 添加火光摇动效果 */
+}
+
+@keyframes fire-flicker {
+  0% {
+    box-shadow: 0px 0px 8px 8px #03bbf3; /* 初始阴影 */
+  }
+  25% {
+    box-shadow: 2px 2px 12px 10px #03bbf3; /* 阴影轻微移动和变大 */
+  }
+  50% {
+    box-shadow: -2px -2px 15px 12px #03bbf3; /* 阴影偏移，模拟摇动 */
+  }
+  75% {
+    box-shadow: 2px -2px 10px 8px #03bbf3; /* 反向偏移 */
+  }
+  100% {
+    box-shadow: -2px 2px 8px 10px #03bbf3; /* 恢复初始状态 */
+  }
+}
+
+
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.jc-center{
+  display: flex;
+  justify-content: center;
+}
+
+.ai-center{
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  background: linear-gradient(to right, #ead6ee, #a0f1ea);
+  width: 60%;
+  height: 1px;
+}
+
+.line-dibu{
+  margin:0px 20px 0px 20px;
+  background-color: #e0e0e0;
+  width: 60%;
+  height: 1px;
+}
+
+.geyan{
+  letter-spacing: 2px;
+  font-family: cursive;
+  font-style: italic;
+}
+
+.part4{
+  width: 80%;
+  padding: 20px;
+  margin:20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.nl-box {
+  width: 140px;
+  height: 100px;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative; /* 必须设置为相对定位，便于伪元素定位 */
+  overflow: hidden; /* 防止超出内容溢出 */
+}
+
+.nl-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px; /* 圆角边框 */
+  border: 2px solid transparent; /* 边框默认透明 */
+  background: linear-gradient(90deg, rgba(115, 196, 165, 0), rgba(115, 196, 165, 1), rgba(115, 196, 165, 0)); /* 线性渐变颜色 */
+  background-size: 200% 100%; /* 扩大背景以允许动画流动 */
+  animation: flow 3s infinite; /* 循环播放动画 */
+}
+
+@keyframes flow {
+  0% {
+    background-position: 200% 0; /* 流光从右侧开始 */
+  }
+  100% {
+    background-position: -200% 0; /* 流光从左侧结束 */
+  }
+}
+
+
+.bt-jiange{
+  margin-bottom: 5px;
+}
+
+.part5{
+  width: 80%;
+  padding: 20px;
+  margin:20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.lunbo {
+  width: 100%;
+  height: 600rpx;
+  margin-top: 10px;
+}
+
+.lunbo image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.part6{
+  width: 80%;
+  padding: 20px;
+  margin:20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.lj-button{
+  margin: 20px;
+  border-radius: 25px;
+}
+
+.text-shadow{
+  text-shadow:10px 10px 10px #08a161;
+}
+
+.zuoping-img{
+  width: 100%;
+  height: 100px;
+  border-radius: 20px;
+}
+
+.myVideo{
+  border-radius: 20px;
+}
+
+.line-shu{
+  background: linear-gradient(to right, #ead6ee, #a0f1ea);
+  width: 1%;
+  height: 200px;
+}
+
+.biaoti{
+  margin:0px 20px 0px 20px;
+  white-space: nowrap;
+}
+
+.music {
+  width: 40px; /* 调整图标大小 */
+  height: 40px;
+  position: fixed; /* 固定在屏幕某个位置 */
+  bottom: 180px; /* 距离底部20px */
+  right: 20px; /* 距离右侧20px */
+  z-index: 9; /* 确保在其他元素上方 */
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotate {
+  animation: spin 2s linear infinite; /* 2s旋转一圈，持续旋转 */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

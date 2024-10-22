@@ -1,0 +1,28 @@
+/* pages/jianli/jianli.wxss */
+.me-card {
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 60px;
+  background-color: #f5f5f5;
+}
+
+.mecar-title {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.me-image {
+  display: flex;
+  align-items: center;
+}
+
+.me-image image {
+  width: 320px;
+  height: 500px;
+  /* border-radius: 50%; */
+}

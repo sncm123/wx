@@ -1,0 +1,8 @@
+<!--pages/jianli/jianli.wxml-->
+<view class="me-card">
+  <view class="mecar-title">
+    <view class="me-image">
+      <image src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17264777163423920675.png" alt="头像" />
+    </view>
+  </view>
+</view>
