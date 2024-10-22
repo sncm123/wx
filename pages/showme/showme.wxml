@@ -1,44 +1,18 @@
-<view class="container container-snow">
-  <canvas canvas-id="snowCanvas" class="canvas"></canvas>
-  <!-- 第一个块，图片在左，文字在右 -->
-  <view class="content-block left">
-    <image class="image" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17264774327260713220.png"></image>
-    <view class="description">
-      <view class="white">-2021/9</view>
-      <view class="white">还是个小新生</view>
-    </view>
-    <view class="circle-line"></view> <!-- 线与圆点 -->
+<view class="container">
+  <view class="header">
+    <text class="title">我的成长历程</text>
   </view>
-  
-  <!-- 第二个块，文字在左，图片在右 -->
-  <view class="content-block">
-    <view class="circle-line"></view> <!-- 线与圆点 -->
-    <view class="description right">
-      <view class="white">2021/9 - 2022/9</view>
-      <view class="white">正在学习专业知识，沉淀！</view>
+  <view class="timeline">
+    <view class="timeline-item" wx:for="{{timelineData}}" wx:key="index">
+      <view class="timeline-content {{index % 2 === 0 ? 'left' : 'right'}}">
+        <view class="timeline-image-container">
+          <image class="timeline-image" src="{{item.image}}" mode="aspectFill"></image>
+        </view>
+        <view class="timeline-text">
+          <text class="timeline-date">{{item.date}}</text>
+          <text class="timeline-description">{{item.description}}</text>
+        </view>
+      </view>
     </view>
-    <image class="image" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17264784815563531675.png"></image>
-  </view>
-
-  <!-- 第三个块，图片在左，文字在右 -->
-  <view class="content-block left">
-    <image class="image" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17264773349255096696.png"></image>
-    <view class="description right">
-      <view class="white">2022/9 - 2023/9</view>
-      <view class="white">制作了第一款app学习了ae</view>
-    </view>
-    <view class="circle-line"></view> <!-- 线与圆点 -->
-  </view>
-  
-  <!-- 第四个块，文字在左，图片在右 -->
-  <view class="content-block">
-    <view class="circle-line"></view> <!-- 线与圆点 -->
-    <view class="description right">
-      <view class="white">2023/9 - 2024/9</view>
-      <view class="white">自己个人完成了全流程的unity和UE5的游戏制作</view>
-    </view>
-    <image class="image" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/64b7d2ea5a7e3f0310792892/66e15ae563765d0012a3e1cc/17264785408194135369.png"></image>
   </view>
 </view>
-
-

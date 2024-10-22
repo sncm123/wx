@@ -1,86 +1,37 @@
 Page({
   data: {
-    snowflakes: [],  // 存储雪花的数组
-    canvasWidth: 0,
-    canvasHeight: 0,
-  },
-  
-  onLoad: function () {
-    const query = wx.createSelectorQuery();
-    query.select('.canvas').boundingClientRect(res => {
-      const canvasWidth = res.width;
-      const canvasHeight = res.height;
-
-      this.setData({
-        canvasWidth,
-        canvasHeight
-      });
-
-      // 初始化画布和雪花
-      this.initCanvas(canvasWidth, canvasHeight);
-      this.generateSnowflakes();
-      this.animateSnowflakes();
-    }).exec();
-  },
-
-  // 初始化画布
-  initCanvas: function (canvasWidth, canvasHeight) {
-    this.ctx = wx.createCanvasContext('snowCanvas');
-    this.ctx.setFillStyle('white');
-    this.setData({
-      canvasWidth,
-      canvasHeight
-    });
-  },
-
-  // 生成雪花
-  generateSnowflakes: function () {
-    const snowflakes = [];
-    for (let i = 0; i < 50; i++) {  // 随机生成50片雪花
-      snowflakes.push({
-        x: Math.random() * this.data.canvasWidth,  // x 轴位置
-        y: Math.random() * this.data.canvasHeight, // y 轴位置
-        radius: Math.random() * 4 + 1,  // 半径
-        speed: Math.random() * 3 + 1,  // 下落速度
-        swing: Math.random() * 2 - 1  // 左右摇摆的幅度
-      });
-    }
-    this.setData({
-      snowflakes
-    });
-  },
-
-  // 绘制和更新雪花
-  animateSnowflakes: function () {
-    const snowflakes = this.data.snowflakes;
-    const ctx = this.ctx;
-
-    // 清空画布
-    ctx.clearRect(0, 0, this.data.canvasWidth, this.data.canvasHeight);
-
-    // 绘制每片雪花
-    snowflakes.forEach(snowflake => {
-      ctx.beginPath();
-      ctx.arc(snowflake.x, snowflake.y, snowflake.radius, 0, Math.PI * 2);
-      ctx.setFillStyle('white');
-      ctx.fill();
-
-      // 更新雪花位置
-      snowflake.y += snowflake.speed;
-      snowflake.x += snowflake.swing;
-
-      // 如果雪花超出底部则重置到顶部
-      if (snowflake.y > this.data.canvasHeight) {
-        snowflake.y = -snowflake.radius;
-        snowflake.x = Math.random() * this.data.canvasWidth;
+    timelineData: [
+      {
+        date: '2021年9月',
+        description: '踏入大学校园，开启人生新篇章。充满好奇与期待，准备迎接未来的挑战。',
+        image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+      },
+      {
+        date: '2021年9月 - 2022年9月',
+        description: '专注学习专业知识，不断探索和成长。每一天都是新的收获，为未来打下坚实基础。',
+        image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+      },
+      {
+        date: '2022年9月 - 2023年9月',
+        description: '迈出创新的第一步，开发了人生第一款app。同时，掌握了AE技能，为创意插上翅膀。',
+        image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+      },
+      {
+        date: '2023年9月 - 2024年9月',
+        description: '挑战自我，独立完成Unity和UE5游戏开发全流程。梦想在指尖绽放，创意无限可能。',
+        image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
       }
-    });
+    ]
+  },
 
-    ctx.draw();
+  onLoad: function() {
+    // 页面加载时的逻辑
+  },
 
-    // 使用 requestAnimationFrame 实现循环动画
-    wx.nextTick(() => {
-      this.animateSnowflakes();
-    });
+  onShareAppMessage: function () {
+    return {
+      title: '我的成长历程',
+      path: '/pages/showme/showme'
+    }
   }
 });
